@@ -8,22 +8,22 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'calculahora',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../calculahora/calculahora.module').then(m => m.CalculaHoraModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'calculasalario',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../calculasalario/calculasalario.module').then(m => m.Tab2PageModule)
           }
         ]
       },
@@ -39,14 +39,14 @@ const routes: Routes = [
       },*/
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/calculahora',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/calculahora',
     pathMatch: 'full'
   }
 ];

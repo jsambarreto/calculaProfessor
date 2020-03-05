@@ -7,10 +7,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  {
-    path: 'calculaHora',
-    loadChildren: './tab2/tab2.module'
-  }
+  
 ];
 
 @NgModule({

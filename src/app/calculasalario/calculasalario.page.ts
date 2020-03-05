@@ -2,11 +2,11 @@ import { Component, Input, Output } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-calculasalario',
+  templateUrl: 'calculasalario.page.html',
+  styleUrls: ['calculasalario.page.scss']
 })
-export class Tab2Page {
+export class CalculaSalarioPage {
 
   constructor(public alertController: AlertController) { }
 
