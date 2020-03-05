@@ -27,7 +27,7 @@ const routes: Routes = [
           }
         ]
       },
-      {
+     {
         path: 'tab3',
         children: [
           {
