@@ -12,29 +12,40 @@
       <ion-title size="large">Calcula hora</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-item>
-  <ion-label position="floating">Valor bruto</ion-label>
-  <ion-input type="number" id = 'vBruto'></ion-input>
-</ion-item>
- </ion-col>
+    <ion-col style="text-align: center">
+      <ion-item>
+        <ion-label position="floating">Valor bruto</ion-label>
+        <ion-input type="number" [(ngModel)]= 'vBruto' ></ion-input>
+      </ion-item>
+    </ion-col>
   </ion-row>
+  
   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-item>
-  <ion-label position="floating">Horas totais</ion-label>
-  <ion-input type="number" id = 'vHora1'></ion-input>
-</ion-item>
- </ion-col>
+    <ion-col style="text-align: center">
+      <ion-item>
+        <ion-label position="floating">Horas totais</ion-label>
+        <ion-input type="number" [(ngModel)]= 'vHora1'></ion-input>
+      </ion-item>
+    </ion-col>
   </ion-row>
 
   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-button color="medium" (click) ="showHora()">Calcula hora</ion-button>
-
-  </ion-col>
+    <ion-col style="text-align: center">
+      <ion-button color="medium" (click) ="showHora()">Calcula hora</ion-button>
+    </ion-col>
   </ion-row>
+
+  <!--<ion-row>
+    <ion-col style="text-align: center">
+      <ion-item>
+        <ion-label position="floating">Resultado</ion-label>
+        <ion-input type="number" >{{ resultado }}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>-->
+  
 </ion-content>
 
 

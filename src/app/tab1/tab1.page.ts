@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { NavController } from '@ionic/angular';
-import { NavParams } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -9,20 +8,26 @@ import { NavParams } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
-  constructor(public alertController: AlertController, public navCtrl: NavController,
-    public navParams: NavParams) {}
-
-  async showHora() {
+  constructor(public alertController: AlertController) {
     
-
+  }
+  @Input() vHora1;   
+  @Input() vBruto;
+  @Output() resultado = new EventEmitter();
+  
+  async showHora() {
+    var valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
+    
     const alert = await this.alertController.create({
       header: 'Valor da hora aula',
       //subHeader: 'Valor da hora aula',
-      message: 'valorHora',
+      message: valorhora,
       buttons: ['OK']
     });
-  
+    
     await alert.present();
+    this.vHora1=""
+    this.vBruto=""
   }
+  
 }

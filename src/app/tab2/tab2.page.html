@@ -12,27 +12,27 @@
       <ion-title size="large">Calcula salario</ion-title>
     </ion-toolbar>
   </ion-header>
-   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-item>
-  <ion-label position="floating">Valor da hora</ion-label>
-  <ion-input type="number" id='vHora'></ion-input>
-</ion-item>
- </ion-col>
+  
+  <ion-row>
+    <ion-col style="text-align: center">
+      <ion-item>
+        <ion-label position="floating">Valor da hora</ion-label>
+        <ion-input type="number" [(ngModel)]='vHora'>{{ vHora1 }}</ion-input>
+      </ion-item>
+    </ion-col>
   </ion-row>
   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-item>
-  <ion-label position="floating">Horas totais</ion-label>
-  <ion-input type="number" id='nHora'></ion-input>
-</ion-item>
- </ion-col>
+    <ion-col style="text-align: center">
+      <ion-item>
+        <ion-label position="floating">Horas totais</ion-label>
+        <ion-input type="number" [(ngModel)]='nHora'></ion-input>
+      </ion-item>
+    </ion-col>
   </ion-row>
 
   <ion-row>
-  <ion-col style="text-align: center">
-  <ion-button color="medium" (click) ="showSalario()">Calcula salario</ion-button>
-
-  </ion-col>
+    <ion-col style="text-align: center">
+      <ion-button color="medium" (click) ="showSalario()">Calcula salario</ion-button>
+    </ion-col>
   </ion-row>
 </ion-content>
