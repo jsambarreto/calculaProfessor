@@ -1,5 +1,6 @@
 import { Component, Input, Output, Injectable } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+//import { CalculaHoraModule } from '../calculahora/calculahora.module'
 
 @Component({
   selector: 'app-calculasalario',
