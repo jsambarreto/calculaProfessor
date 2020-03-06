@@ -15,16 +15,18 @@ export class CalculaSalarioPage {
   @Input() nHora;
   @Input() valorsalario;
   async showSalario() {
-    this.valorsalario = ((31.5 * this.vHora * this.nHora + 28)/6).toFixed(2);
-    /*const alert = await this.alertController.create({
-      header: 'Valor do salário',
-      message: this.valorsalario, 
-      buttons: ['OK']
-    });*/
-    this.vHora=""
-    this.nHora=""
-    //await alert.present();
-    
+    if (this.vHora!="" || this.nHora!=""){
+      this.valorsalario = ((31.5 * this.vHora * this.nHora + 28)/6).toFixed(2);
+      this.vHora=""
+      this.nHora=""         
+      }
+    else{
+      const alert = await this.alertController.create({
+        header: 'Campo obrigatório em branco',
+        message: 'É necessario informar os valores para o cálculo.', 
+        buttons: ['OK']
+      });
+      await alert.present();
+    }
   }
-
 }

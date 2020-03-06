@@ -16,16 +16,18 @@ export class CalculaHora {
   @Input() valorhora;
   
   async showHora() {
-    this.valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
-    /*const alert = await this.alertController.create({
-      header: 'Valor da hora aula',
-      //subHeader: 'Valor da hora aula',
-      message: this.valorhora,
-      buttons: ['OK']
-    });*/
-    
-    //await alert.present();
-    this.vHora1=""
-    this.vBruto=""
-  }  
+    if (this.vBruto!="" || this.vHora1!=""){
+      this.valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
+      this.vHora1=""
+      this.vBruto=""
+            }    
+    else{
+        const alert = await this.alertController.create({
+          header: 'Campo obrigatório em branco',
+          message: 'É necessario informar os valores para o cálculo.', 
+          buttons: ['OK']
+        });
+        await alert.present();
+    }
+  }
 }
