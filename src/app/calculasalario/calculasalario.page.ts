@@ -15,7 +15,7 @@ export class CalculaSalarioPage {
   @Input() valorsalario;
   async showSalario() {
     if (this.vHora!="" || this.nHora!=""){
-      this.valorsalario = ((31.5 * this.vHora * this.nHora + 28)/6).toFixed(2);
+      this.valorsalario = ((31.5 * Number(this.vHora) * Number(this.nHora) + 28)/6).toFixed(2);
       this.vHora=""
       this.nHora=""         
     }

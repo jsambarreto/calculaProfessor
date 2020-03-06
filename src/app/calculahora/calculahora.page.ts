@@ -19,7 +19,7 @@ export class CalculaHora {
     console.log(this.vBruto);
     console.log(this.vHora1);
     if (this.vBruto!="" || this.vHora1!=""){
-      this.valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
+      this.valorhora = (((Number(this.vBruto)*6) - 28)/(Number(this.vHora1) * 31.5)).toFixed(2);
       this.vHora1=""
       this.vBruto=""
             }    
