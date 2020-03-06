@@ -16,7 +16,7 @@
   <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="floating">Valor da hora</ion-label>
+        <ion-label position="floating">Valor da hora:</ion-label>
         <!--<app-calculahora [valorhora]='valorhora'></app-calculahora>-->
         <ion-input type="number" [(ngModel)]='vHora'></ion-input>
       </ion-item>
@@ -25,7 +25,7 @@
   <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="floating">Horas totais</ion-label>
+        <ion-label position="floating">Horas totais:</ion-label>
         <ion-input type="number" [(ngModel)]='nHora'></ion-input>
       </ion-item>
     </ion-col>
@@ -40,8 +40,8 @@
    <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="stacked">Resultado</ion-label>
-        <ion-input type="number" id= 'valorsalario'>{{ valorsalario }}</ion-input>
+        <ion-label style= "font-size: 16px">Resultado:</ion-label>
+        <div id= 'valorsalario'>{{ valorsalario }}</div>
       </ion-item>
     </ion-col>
   </ion-row>

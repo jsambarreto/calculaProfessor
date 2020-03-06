@@ -16,7 +16,7 @@
   <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="floating">Valor bruto</ion-label>
+        <ion-label position="floating">Valor bruto:</ion-label>
         <ion-input type="number" [(ngModel)]= 'vBruto' ></ion-input>
       </ion-item>
     </ion-col>
@@ -25,7 +25,7 @@
   <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="floating">Horas totais</ion-label>
+        <ion-label position="floating">Horas totais:</ion-label>
         <ion-input type="number" [(ngModel)]= 'vHora1'></ion-input>
       </ion-item>
     </ion-col>
@@ -40,8 +40,8 @@
   <ion-row>
     <ion-col style="text-align: center">
       <ion-item>
-        <ion-label position="stacked">Resultado</ion-label>
-        <ion-input type="number" id= 'valorhora'>{{ valorhora }}</ion-input>
+        <ion-label style= "font-size: 16px">Resultado:</ion-label>
+        <div id= 'valorhora' [(ngModel)]='valorhora' >{{ valorhora }}</div>
       </ion-item>
     </ion-col>
   </ion-row>
