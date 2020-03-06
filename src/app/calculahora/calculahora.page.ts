@@ -13,7 +13,7 @@ export class CalculaHora {
   }
   @Input() vHora1="";   
   @Input() vBruto="";
-  @Input() valorhora="";
+  @Input() valorhora;
   
   async showHora() {
     console.log(this.vBruto);
