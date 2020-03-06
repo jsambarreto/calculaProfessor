@@ -16,4 +16,4 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
   ],
   declarations: [CalculaSalarioPage]
 })
-export class Tab2PageModule {}
+export class CalculaSalarioModule {}

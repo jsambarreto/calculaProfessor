@@ -23,7 +23,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../calculasalario/calculasalario.module').then(m => m.Tab2PageModule)
+              import('../calculasalario/calculasalario.module').then(m => m.CalculaSalarioModule)
           }
         ]
       },

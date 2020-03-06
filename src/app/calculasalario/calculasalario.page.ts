@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, Injectable } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -12,17 +12,17 @@ export class CalculaSalarioPage {
 
   @Input() vHora;
   @Input() nHora;
-     
+  @Input() valorsalario;
   async showSalario() {
-    var salario = ((31.5 * this.vHora * this.nHora + 28)/6).toFixed(2);
-    const alert = await this.alertController.create({
+    this.valorsalario = ((31.5 * this.vHora * this.nHora + 28)/6).toFixed(2);
+    /*const alert = await this.alertController.create({
       header: 'Valor do salário',
-      message: salario, 
+      message: this.valorsalario, 
       buttons: ['OK']
-    });
+    });*/
     this.vHora=""
     this.nHora=""
-    await alert.present();
+    //await alert.present();
     
   }
 

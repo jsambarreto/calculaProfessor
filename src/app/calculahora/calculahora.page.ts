@@ -13,17 +13,18 @@ export class CalculaHora {
   }
   @Input() vHora1;   
   @Input() vBruto;
+  @Input() valorhora;
   
   async showHora() {
-    const valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
-    const alert = await this.alertController.create({
+    this.valorhora = (((this.vBruto*6) - 28)/(this.vHora1 * 31.5)).toFixed(2);
+    /*const alert = await this.alertController.create({
       header: 'Valor da hora aula',
       //subHeader: 'Valor da hora aula',
-      message: valorhora,
+      message: this.valorhora,
       buttons: ['OK']
-    });
+    });*/
     
-    await alert.present();
+    //await alert.present();
     this.vHora1=""
     this.vBruto=""
   }  
