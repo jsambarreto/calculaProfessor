@@ -1,4 +1,4 @@
-import { Component, Input, Output, Injectable } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -13,7 +13,9 @@ export class CalculaSalarioPage {
   @Input() vHora="";
   @Input() nHora="";
   @Input() valorsalario;
+  
   async showSalario() {
+    
     if (this.vHora!="" || this.nHora!=""){
       this.valorsalario = ((31.5 * (Number(this.vHora)) * (Number(this.nHora)) + 28)/6).toFixed(2);
       this.vHora=""

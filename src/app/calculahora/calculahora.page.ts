@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['calculahora.page.scss']
 })
 export class CalculaHora {
-   
+
   constructor(public alertController: AlertController) {
     
   }
