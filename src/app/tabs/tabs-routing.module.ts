@@ -27,26 +27,26 @@ const routes: Routes = [
           }
         ]
       },
-     /*{
-        path: 'tab3',
+     {
+        path: 'home',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../home/home.module').then(m => m.HomePageModule)
           }
         ]
-      },*/
+      },
       {
         path: '',
-        redirectTo: '/tabs/calculahora',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/calculahora',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

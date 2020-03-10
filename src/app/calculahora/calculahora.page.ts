@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-calculahora',
@@ -14,10 +15,7 @@ export class CalculaHora {
   @Input() vHora1="";   
   @Input() vBruto="";
   @Input() valorhora;
-  
   async showHora() {
-    console.log(this.vBruto);
-    console.log(this.vHora1);
     if (this.vBruto!="" || this.vHora1!=""){
       this.valorhora = (((Number(this.vBruto)*6) - 28)/(Number(this.vHora1) * 31.5)).toFixed(2);
       this.vHora1=""
@@ -32,6 +30,7 @@ export class CalculaHora {
         await alert.present();
         
       }
+      
   }
   
 }

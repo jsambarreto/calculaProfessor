@@ -8,12 +8,15 @@ import { AlertController } from '@ionic/angular';
 })
 export class CalculaSalarioPage {
 
-  constructor(public alertController: AlertController) { }
+  constructor(public alertController: AlertController) { 
+    
+  }
 
-  @Input() vHora="";
+    @Input() vHora="";
   @Input() nHora="";
   @Input() valorsalario;
-  
+
+   
   async showSalario() {
     
     if (this.vHora!="" || this.nHora!=""){
